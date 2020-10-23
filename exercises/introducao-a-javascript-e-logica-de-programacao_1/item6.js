@@ -1,10 +1,25 @@
-let torre = ("cima, baixo, direita ,esquerda");
-let rainha = ("todas as direções em linhas retas");
-let rei = ("uma casa para todas as direções");
-let peão = ("pra frente");
-let bispo = ("diagonais");
-let cavalo = ("movimentação em L");
+let pecaXadrez = "Cavalo";
 
-"Qual peça de xadrez você gostaria de conhecer?"
+switch (pecaXadrez.toLowerCase()){
 
-console.log(cavalo);
+    case "cavalo":
+        console.log("A peça se movimenta em L");
+        break;
+    case "peão":
+        console.log("Uma casa pra frente");
+        break;
+    case "bispo":
+        console.log("Diagonais");
+        break;
+    case "torre":
+        console.log("Frente, trás, direita e esquerda");
+        break;
+    case "rei":
+        console.log("uma casa para todos os lados");
+        break;
+    case "rainha":
+        console.log("todos os lados e diagonais");
+        break;
+    default:
+        console.log("ERRO! Peça não encontrada!");
+}
