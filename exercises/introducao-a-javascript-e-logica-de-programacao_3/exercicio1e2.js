@@ -10,7 +10,8 @@ for (let linha = 0; linha < n; linha +=1) {
 for (let coluna = 0; coluna < n; coluna +=1) {
     console.log(space);
 }
-console.log();
+            
+    console.log();
     
 //segundo exercício
 
