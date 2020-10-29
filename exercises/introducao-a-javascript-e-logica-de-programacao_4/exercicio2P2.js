@@ -1,11 +1,10 @@
-function maiorNumero(numeros) {
-    let maior = 0;
-    for (let key in numeros) {
-      if (numeros[maior] < numeros[key]) {
-        maior = key;
+  function maior(numeros){
+    let maiorN = 0;
+    for (let index = 0; index < numeros.length; index +=1){
+      if(numeros[maiorN] < numeros[index]){
+        maiorN = index;
       }
     }
-    return maior;
+    return maiorN;
   }
-  
-  console.log(maiorNumero([8, 9, 1, 3, 12, 5, 22, 4]));
+  console.log(maior([8, 9, 1, 22, 12, 5, 3, 4]));
