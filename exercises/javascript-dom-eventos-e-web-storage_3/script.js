@@ -26,15 +26,15 @@ function createDaysOfTheWeek() {
 
       if(day === 24 || day === 31){
         dayItem.className = 'day holiday';
-        dayItem.innetHTML = day;
+        dayItem.innerHTML = day;
         getDaysList.appendChild(dayItem);
       } else if(day === 25){
-        dayItem.className = 'day holiday friday';
+        dayItem.className = 'day holiday friday-day';
         dayItem.innerHTML = day;
         getDaysList.appendChild(dayItem);
 
       } else if(day === 4 || day === 11 || day === 18){
-          dayItem.className = 'day friday';
+          dayItem.className = 'day friday-day';
           dayItem.innerHTML = day;
           getDaysList.appendChild(dayItem);
 
@@ -59,4 +59,54 @@ function createDaysOfTheWeek() {
   getBtn('Feriados');
 
   //Exercício 3
-  
+
+  function btnClickEvent(){
+    let holidayButton = document.querySelector('#btn-holiday');
+    let holidaysDay = document.querySelectorAll('.holiday');
+    let backgroundColor = "rgb(238,238,238)";
+    let newColor = 'white';
+    
+    holidayButton.addEventListener('click', function(){
+        for(index = 0; holidaysDay.length > index; index+=1){
+            if (holidaysDay[index].style.backgroundColor === newColor) {
+                holidaysDay[index].style.backgroundColor = backgroundColor;
+            } else {
+                holidaysDay[index].style.backgroundColor = newColor;
+            }
+        }
+    })
+  };
+  btnClickEvent();
+
+  //exercicio 4
+  function fridayDay(itsFriday){
+    let buttonContainer = document.querySelector('.buttons-container');  
+    let fridayBtn = document.createElement('button');
+
+    fridayBtn.innerHTML = itsFriday;
+    fridayBtn.id = 'btn-friday';
+    buttonContainer.appendChild(fridayBtn);
+  }
+  fridayDay('Sexta-Feira');
+
+  //exercicio 5
+
+  function fridayEvent(fridayDayArray){
+    let fridayButton = document.querySelector('#btn-friday');
+    let fridayDay = document.getElementsByClassName('friday-day');
+    let newText = 'SEXTOU!';
+    
+    fridayButton.addEventListener('click', function(){
+        for(let index = 0 ; index < fridayDay.length ; index+=1) {
+            if(fridayDay[index].innerHTML !== newText){
+                fridayDay[index].innerHTML = newText;
+            } else {
+                fridayDay[index].innerHTML = fridayDayArray[index];
+            }
+        }
+    })
+
+  };
+
+  let fridayDays = [ 4 ,11 ,18, 25 ];
+  fridayEvent(fridayDays);
