@@ -1,0 +1,16 @@
+.header{
+    font-family: monospace;
+    text-align: center;
+    text-decoration: underline;
+}
+.article{
+    margin: 10px;
+}
+.paragraph{
+    text-align: justify;
+}
+
+footer{
+    color: white;
+    margin: 10px;
+}
