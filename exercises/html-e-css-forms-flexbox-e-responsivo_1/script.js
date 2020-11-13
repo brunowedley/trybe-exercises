@@ -1,4 +1,5 @@
 let statesObject = {
+  'EE': 'Escolha seu estado',
   'AC': 'Acre',
   'AL': 'Alagoas',
   'AP': 'Amapá',
@@ -27,13 +28,43 @@ let statesObject = {
   'SE': 'Sergipe',
   'TO': 'Tocantins'
 }
-for (let key in statesObject) {
-  let states = document.querySelector("#input-uf");
-  let option = document.createElement("option");
-  option.innerHTML = statesObject[key];
-  option.className = "states"
-  option.value = key;
-  states.appendChild(option);
+
+function getStates() {
+  for (let key in statesObject) {
+    let states = document.querySelector("#input-uf");
+    let option = document.createElement("option");
+    option.innerHTML = statesObject[key];
+    option.className = "states"
+    option.value = key;
+    states.appendChild(option);
+  }
 }
+getStates();
 
 let date = document.querySelector("#input-start-date");
+
+let clearButton = document.querySelector("#clear-informations");
+
+clearButton.addEventListener('click', clearInformations)
+
+function clearInformations() {
+  let names = document.querySelector("#input-name");
+  let adress = document.querySelector("#input-adress");
+  let cpf = document.querySelector("#input-cpf");
+  let email = document.querySelector("#input-email");
+  let city = document.querySelector("#input-city");
+  let states = document.querySelector("#input-uf");
+  let apartment = document.querySelector("#input-apartment");
+  let house = document.querySelector("#input-house");
+  let curriculum = document.querySelector("#input-curriculum");
+  let position = document.querySelector("#input-position");
+  let description = document.querySelector("#input-position-description");
+  let date = document.querySelector("#input-start-date");
+
+  let informations = [names, adress, cpf, email, city, states, apartment, house, curriculum, position, description, date];
+
+  for (let key in informations) {
+    informations[key].value = "";
+    getStates();
+  }
+}
