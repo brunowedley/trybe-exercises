@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
+    <link rel="stylesheet" href="bulma/css/bulma.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,52 +15,48 @@
     </header>
     <form action="" method="get" class="speaker-form">
         <fieldset class="field-text">
-            <legend>Informações Pessoais</legend>
-            <div class="main-information">
-                <label for="input-name">Nome:</label>
-                <input type="text" name="name" id="input-name" placeholder="Digite seu nome." required maxLength='40'>
-                <label for="input-email">E-Mail:</label>
-                <input type="text" name="email" id="input-email" placeholder="Escreva seu email.">
-                <label for="input-cpf">CPF:</label>
-                <input type="text" name="cpf " id="input-cpf" placeholder="Digite seu CPF. " required maxLength='11'>
-                <label for="input-adress">Endereço:</label>
-                <input name="adress" id="input-adress" placeholder="Digite seu endereço." required maxlength="200">
-                <label for="input-city">Cidade:</label>
-                <input type="text" name="city" id="input-city" placeholder="Onde você mora?" required maxlength="28">
+            <p class="title is-5">Informações Pessoais.</p>
+            <div class="main-information control">
+                <label class="label" for="input-name">Nome:</label>
+                <input class="input is-info" type="text" name="name" id="input-name" placeholder="Digite seu nome." required maxLength='40'>
+                <label class="label" for="input-email">E-Mail:</label>
+                <input class="input is-info" type="text" name="email" id="input-email" placeholder="Escreva seu email.">
+                <label class="label" for="input-cpf">CPF:</label>
+                <input class="input is-info" type="text" name="cpf " id="input-cpf" placeholder="Digite seu CPF. " required maxLength='11'>
+                <label class="label" for="input-adress">Endereço:</label>
+                <input class="input is-info" name="adress" id="input-adress" placeholder="Digite seu endereço." required maxlength="200">
+                <label class="label" for="input-city">Cidade:</label>
+                <input class="input is-info" type="text" name="city" id="input-city" placeholder="Onde você mora?" required maxlength="28">
             </div>
-            <div class="states">
-                <label for="input-uf">Estado: </label>
-                <select name="uf" id="input-uf" required></select>
+            <div class="control">
+                <label class="label" for="input-uf">Estado: </label>
+                <div class="select is-info">
+                    <select name="uf" id="input-uf" required></select>
+                </div>
             </div>
-            <div id="living">
-                <label for="living">Complemento: </label>
-                <input type="radio" name="home" id="input-apartment" required>
-                <label for="input-apartment">Apartamento</label>
-                <input type="radio" name="home" id="input-house">
-                <label for="input-house">Casa</label>
+            <div id="living" class="control complement">
+                <label class="title is-6" for="living">Complemento: </label>
+                <label class="label" for="input-apartment">Apartamento <input class="radio" type="radio" name="home" id="input-apartment" required></label>
+                <label class="label" for="input-house">Casa <input class="radio" type="radio" name="home" id="input-house"></label>
             </div>
         </fieldset>
         <fieldset class="field-text">
-            <legend>Dados do seu último emprego.</legend>
+            <p class="title is-5">Dados do seu último emprego.</p>
             <div id="job-informations">
-                <label for="input-curriculum">Currículo: </label>
-                <textarea type="text" cols="30" rows="10" name="curriculum" id="input-curriculum" placeholder="Qual suas experiências?" required maxlength="1000"></textarea>
-                <label for="input-position">Cargo: </label>
-                <input type="text" name="position" id="input-position" placeholder="Fale sobre seu cargo." required maxlength="40">
-                <label for="input-position-description">Descrição do cargo: </label>
-                <input type="text" name="position-description" id="input-position-description" placeholder="Descreva seu cargo" required maxlength="500">
-                <label for="input-start-date">Data de início: </label>
-                <input type="date" name=" start-date " id="input-start-date " placeholder="dd/mm/aaaa " required>
+                <label class="label" for="input-curriculum">Currículo: <textarea class="textarea" type="text" cols="30" rows="10" name="curriculum" id="input-curriculum" placeholder="Conte suas experiências em até 1000 palavras." required maxlength="1000"></textarea></label>
+                <label class="label" for="input-position">Cargo: <input class="input is-info" type="text" name="position" id="input-position" placeholder="Fale sobre seu cargo." required maxlength="40"></label>
+                <label class="label" for="input-position-description">Descrição do cargo: <input class="input is-info" type="text" name="position-description" id="input-position-description" placeholder="Descreva seu cargo" required maxlength="500"></label>
+                <label class="label calendar" for="input-start-date">Data de início:  <input type="date" name=" start-date" id="input-start-date" required></label>
             </div>
         </fieldset>
-        <div>
-            <button type="submit " id="submit-informations ">Submit</button>
+        <div class="control">
+            <button class="button is-success is-light is-outlined is-rounded" type="submit " id="submit-informations">Submit</button>
+            <button type="reset" class="button is-danger is-light is-outlined is-rounded" id="clear-informations ">Limpar</button>
         </div>
     </form>
-    <div>
-        <button id="clear-informations ">Limpar</button>
-    </div>
+
 </body>
+
 <script script type="text/javascript " src="script.js "></script>
 
 </html>
