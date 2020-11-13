@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <form action="" method="get" class="speaker-form">
+        <fieldset class="field-text">
+            <legend>Informações Pessoais</legend>
+            <div class="main-information">
+                <label for="input-name">Nome:</label>
+                <input type="text" name="name" id="input-name" placeholder="Digite seu nome." required maxLength='40'>
+                <label for="input-email">E-Mail:</label>
+                <input type="text" name="email" id="input-email" placeholder="Escreva seu email.">
+                <label for="input-cpf">CPF:</label>
+                <input type="text" name="cpf " id="input-cpf" placeholder="Digite seu CPF. " required maxLength='11'>
+                <label for="input-adress">Endereço:</label>
+                <input name="adress" id="input-adress" placeholder="Digite seu endereço." required maxlength="200">
+                <label for="input-city">Cidade:</label>
+                <input type="text" name="city" id="input-city" placeholder="Onde você mora?" required maxlength="28">
+            </div>
+            <div class="states">
+                <label for="input-uf">Estado: </label>
+                <select name="uf" id="input-uf" required>
+                </select>
+            </div>
+            <div id="living">
+                <label for="living">Complemento: </label>
+                <input type="radio" name="home" id="input-apartment" required>
+                <label for="input-apartment">Apartamento</label>
+                <input type="radio" name="home" id="input-house">
+                <label for="input-house">Casa</label>
+            </div>
+        </fieldset>
+        <fieldset class="field-text">
+            <legend>Dados do seu último emprego.</legend>
+            <div id="job-informations">
+                <label for="input-curriculum">Currículo: </label>
+                <textarea type="text" cols="30" rows="10" name="curriculum" id="input-curriculum" placeholder="Qual suas experiências?" required maxlength="1000"></textarea>
+                <label for="input-position">Cargo: </label>
+                <input type="text" name="position" id="input-position" placeholder="Fale sobre seu cargo." required maxlength="40">
+                <label for="input-position-description">Descrição do cargo: </label>
+                <input type="text" name="position-description" id="input-position-description" placeholder="Descreva seu cargo" required maxlength="500">
+                <label for="input-start-date">Data de início: </label>
+                <input type="text" name="start-date" id="input-start-date" placeholder="dd/mm/aaaa" required>
+            </div>
+        </fieldset>
+    </form>
+</body>
+<script script type="text/javascript " src="script.js "></script>
+
+</html>

@@ -1,0 +1,25 @@
+* {
+    margin: auto;
+}
+
+.field-text {
+    width: 83%;
+    margin: 10px auto;
+    background-color: rgb(214, 214, 214);
+}
+
+.field-text input {
+    padding: 5px;
+    margin-bottom: 20px;
+    background-color: rgb(238, 238, 238);
+    border-radius: 3px;
+    border: 1px solid rgb(156, 156, 156)
+}
+
+.main-information label {
+    padding: 5px;
+}
+
+#living {
+    margin-top: 10px;
+}
