@@ -84,3 +84,81 @@ html {
         background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(145, 145, 145));
     }
 }
+
+@media screen and (min-width: 768px) {
+    .container header {
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(243, 243, 243);
+        flex-wrap: wrap;
+    }
+    .container header hr {
+        width: 200px;
+        height: 2px;
+        border: none;
+        background-color: #191c03;
+    }
+    .aside-one h2 {
+        font-size: 20px;
+        text-decoration: underline;
+    }
+    .aside-one ul {
+        font-size: 15px;
+    }
+    .aside-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(187, 187, 187));
+    }
+    .aside-two h2 {
+        font-size: 20px;
+        text-decoration: underline;
+    }
+    .aside-two ul {
+        font-size: 15px;
+    }
+    .aside-two {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .aside-two hr {
+        width: 200px;
+        height: 2px;
+        border: none;
+        background-color: #191c03;
+    }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-content h1 {
+        font-size: 25px;
+        color: gray;
+    }
+    .main-content p {
+        font-size: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+        text-align: justify;
+    }
+    footer {
+        font-size: 15px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+        background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(145, 145, 145));
+    }
+}
